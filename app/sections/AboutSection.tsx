@@ -1,6 +1,7 @@
 'use client';
 
 import { Code, Smartphone, Globe, FileText, Wrench, Users } from 'lucide-react';
+import Image from 'next/image';
 
 export default function AboutSection() {
   const skills = [
@@ -13,9 +14,9 @@ export default function AboutSection() {
   return (
     <div className="w-full min-h-screen flex items-center justify-center">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="text-center mb-16">
-          <h2 className="text-5xl md:text-6xl font-bold gradient-text">
-            About Me
+        <div className="text-center mb-12">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mt-4 mb-4 pb-2 gradient-text">
+            About
           </h2>
           <p className="text-xl text-[var(--foreground-secondary)] max-w-3xl mx-auto leading-relaxed">
             An adaptable creator with a background in Information Management,
@@ -29,13 +30,18 @@ export default function AboutSection() {
           <div className="flex justify-center">
             <div className="relative">
               <div className="w-60 h-60 glass rounded-3xl flex items-center justify-center">
-                <div className="w-50 h-50 bg-gradient-to-br from-[var(--accent)] to-[var(--accent-secondary)] rounded-2xl flex items-center justify-center">
-                  <span className="text-6xl font-bold text-[var(--foreground)]">M</span>
-                </div>
+                <Image
+                  src="/my.jpg"
+                  alt="Muhammad Apriyansah"
+                  width={240}
+                  height={240}
+                  className="rounded-2xl object-cover"
+                />
               </div>
               <div className="absolute -inset-4 bg-gradient-to-r from-[var(--accent)]/20 to-[var(--accent-secondary)]/20 rounded-3xl blur-xl -z-10"></div>
             </div>
           </div>
+
 
           {/* Bio */}
           <div className="space-y-6">
