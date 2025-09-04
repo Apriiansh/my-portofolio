@@ -11,7 +11,7 @@ export default function HomeSection({ onScrollToNext }: HomeSectionProps) {
     <div className="w-full h-screen flex flex-col items-center justify-center relative">
       <div className="text-center z-10 px-4 sm:px-6 lg:px-8">
         {/* Main heading */}
-        <h1 className="text-6xl md:text-8xl font-bold mb-6 gradient-text">
+        <h1 className="text-6xl p-2 md:text-8xl font-bold mb-6 gradient-text">
           Muhammad Apriyansah
         </h1>
 
@@ -26,12 +26,13 @@ export default function HomeSection({ onScrollToNext }: HomeSectionProps) {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <button
-            onClick={onScrollToNext}
+          <a
+            href="/my-cv.pdf"
+            download="my-cv.pdf"
             className="px-16 py-4 bg-gradient-to-r from-[var(--accent)] to-[var(--accent-secondary)] text-white font-semibold rounded-full hover:opacity-90 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
           >
             My CV
-          </button>
+          </a>
           
         </div>
       </div>

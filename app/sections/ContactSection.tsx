@@ -4,16 +4,7 @@ import { Mail, Phone, MapPin, Github, Linkedin, Globe, Instagram, Facebook } fro
 import { useState } from 'react';
 
 export default function ContactSection() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log('Form submitted:', formData);
-  };
+  
 
   const contactInfo = [
     { icon: Mail, label: 'Email', value: 'apriansyahmlp@gmail.com', href: 'mailto:apriansyahmlp@gmail.com' },
@@ -40,53 +31,8 @@ export default function ContactSection() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 w-full">
-          {/* Contact Form */}
-          <div className="glass rounded-3xl p-6">
-            <h3 className="text-xl font-bold mb-4 text-[var(--foreground)]">Send a Message</h3>
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <div>
-                <label className="block text-sm font-medium text-[var(--foreground-secondary)] mb-2">Name</label>
-                <input
-                  type="text"
-                  value={formData.name}
-                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full px-4 py-2 glass rounded-xl text-[var(--foreground)] placeholder-[var(--foreground-secondary)] placeholder-opacity-50 focus:outline-none focus:ring-2 focus:ring-[var(--accent)] transition-all duration-300"
-                  placeholder="Your Name"
-                  required
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-[var(--foreground-secondary)] mb-2">Email</label>
-                <input
-                  type="email"
-                  value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full px-4 py-2 glass rounded-xl text-[var(--foreground)] placeholder-[var(--foreground-secondary)] placeholder-opacity-50 focus:outline-none focus:ring-2 focus:ring-[var(--accent)] transition-all duration-300"
-                  placeholder="your.email@example.com"
-                  required
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-[var(--foreground-secondary)] mb-2">Message</label>
-                <textarea
-                  value={formData.message}
-                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  rows={4}
-                  className="w-full px-4 py-2 glass rounded-xl text-[var(--foreground)] placeholder-[var(--foreground-secondary)] placeholder-opacity-50 focus:outline-none focus:ring-2 focus:ring-[var(--accent)] transition-all duration-300 resize-none"
-                  placeholder="Tell me about your project..."
-                  required
-                />
-              </div>
-              <button
-                type="submit"
-                className="w-full px-6 py-3 bg-gradient-to-r from-[var(--accent)] to-[var(--accent-secondary)] text-white font-semibold rounded-xl hover:opacity-90 transition-all duration-300 transform hover:scale-[1.02] shadow-lg hover:shadow-xl"
-              >
-                Send Message
-              </button>
-            </form>
-          </div>
-
+        <div className="grid lg:grid-cols-1 gap-8 max-w-md mx-auto">
+          
           {/* Contact Info */}
           <div className="space-y-6">
             <div className="glass rounded-3xl p-6">
