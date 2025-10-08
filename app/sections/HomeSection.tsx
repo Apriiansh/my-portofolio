@@ -16,7 +16,7 @@ export default function HomeSection({ onScrollToNext }: HomeSectionProps) {
         </h1>
 
         <p className="text-xl md:text-2xl text-[var(--foreground-secondary)] mb-8 max-w-2xl mx-auto leading-relaxed">
-          Whatever It Is
+          Informatics Technology (IT)
         </p>
 
         <p className="text-lg text-[var(--foreground-secondary)] opacity-80 mb-12 max-w-xl mx-auto">
