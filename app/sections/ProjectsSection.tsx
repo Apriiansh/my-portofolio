@@ -24,7 +24,7 @@ export default function ProjectsSection() {
       title: 'Chemical Engineering Information System',
       description:
         'An academic information website for the Chemical Engineering Department of Polsri with CMS features.',
-      tech: ['Next.Js', 'Tailwind CSS', 'Supabase'],
+      tech: ['Next.Js', 'TypeScript', 'Tailwind CSS', 'Supabase'],
       type: 'website',
       link: 'https://teknikkimia.polsri.ac.id/',
     },
@@ -32,7 +32,7 @@ export default function ProjectsSection() {
       title: 'SPI Polsri',
       description:
         'The official website of the Satuan Pengawasan Internal (SPI) of Polsri to support reports, and internal supervision information.',
-      tech: ['PHP', 'MySQL', 'Tailwind CSS'],
+      tech: ['CodeIgniter4', 'PHP' 'MySQL', 'Tailwind CSS'],
       type: 'website',
       link: 'https://spi.polsri.ac.id/',
     },
