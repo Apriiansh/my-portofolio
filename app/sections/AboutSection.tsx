@@ -20,7 +20,7 @@ export default function AboutSection() {
           </h2>
           <p className="text-xl text-[var(--foreground-secondary)] max-w-3xl mx-auto leading-relaxed">
             An adaptable creator with a background in Information Management,
-            passionate about technology, design, and building practical solutions
+            passionate about technology, programming, and building practical solutions
             — from web & mobile apps to IT support and team collaboration.
           </p>
         </div>
