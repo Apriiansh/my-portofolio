@@ -6,8 +6,8 @@ import Image from 'next/image';
 export default function AboutSection() {
   const skills = [
     { icon: Code, name: 'Programming', desc: 'Web & Mobile Development' },
-    { icon: FileText, name: 'Office Tools', desc: 'Documents, Spreadsheets, Presentations' },
     { icon: Wrench, name: 'IT Support', desc: 'System setup, troubleshooting, hardware' },
+    { icon: FileText, name: 'Office Tools', desc: 'Documents, Spreadsheets, Presentations' },
     { icon: Users, name: 'Soft Skills', desc: 'Problem Solving, Collaboration, Adaptability' }
   ];
 
@@ -16,13 +16,8 @@ export default function AboutSection() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mt-4 mb-4 pb-2 gradient-text">
-            About
+            About Me
           </h2>
-          <p className="text-xl text-[var(--foreground-secondary)] max-w-3xl mx-auto leading-relaxed">
-            An adaptable creator with a background in Information Management,
-            passionate about technology, programming, and building practical solutions
-            — from web & mobile apps to IT support and team collaboration.
-          </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center mb-12">
@@ -48,13 +43,7 @@ export default function AboutSection() {
             <h3 className="text-3xl font-semibold gradient-text">Muhammad Apriyansah</h3>
             <div className="space-y-4 text-[var(--foreground-secondary)]">
               <p>
-                A multi-skilled professional who enjoys exploring different areas of technology
-                and problem-solving. Not limited to software engineering, I work across
-                development, IT support, and digital workflows.
-              </p>
-              <p>
-                I believe in continuous learning and adaptability — bringing value whether
-                it’s coding applications, supporting systems, or collaborating within teams.
+                Versatile IT professional with hands-on experience in software development, technical support, and system administration through diverse freelance projects. I thrive in dynamic environments where each project brings unique challenges—from building web and mobile applications to troubleshooting systems and managing IT infrastructure. My ability to quickly adapt to different technologies and requirements enables me to deliver effective solutions that meet varied client needs.
               </p>
             </div>
           </div>

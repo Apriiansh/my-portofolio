@@ -16,12 +16,11 @@ export default function HomeSection({ onScrollToNext }: HomeSectionProps) {
         </h1>
 
         <p className="text-xl md:text-2xl text-[var(--foreground-secondary)] mb-8 max-w-2xl mx-auto leading-relaxed">
-          Informatics Technology (IT)
+          Software Developer | IT Support Specialist | System Administrator
         </p>
 
         <p className="text-lg text-[var(--foreground-secondary)] opacity-80 mb-12 max-w-xl mx-auto">
-          A versatile creator with a passion for technology, design, and problem-solving —
-          turning ideas into impactful digital solutions across web, mobile, and beyond.
+          Building scalable applications, delivering technical support, and managing IT infrastructure to drive business efficiency.
         </p>
 
         {/* CTA Buttons */}

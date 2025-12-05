@@ -16,25 +16,45 @@ export default function ProjectsSection() {
       title: 'CrChive',
       description:
         'A web-based archival management system with OCR technology to support digital archiving, classification, and retention schedules.',
-      tech: ['Next.js', 'Tailwind CSS', 'Supabase', 'Tesseract OCR'],
-      type: 'github',
-      link: 'https://github.com/Apriiansh/ocr-arsip',
+      tech: ['Next.js', 'Supabase', 'Tesseract OCR'],
+      type: 'both',
+      link: 'https://ocr-arsip.vercel.app/sign-in',
+      githubLink: 'https://github.com/Apriiansh/ocr-arsip',
     },
     {
       title: 'Chemical Engineering Information System',
       description:
         'An academic information website for the Chemical Engineering Department of Polsri with CMS features.',
-      tech: ['Next.Js', 'TypeScript', 'Tailwind CSS', 'Supabase'],
-      type: 'website',
+      tech: ['Next.Js', 'TypeScript', 'Supabase'],
+      type: 'both',
       link: 'https://teknikkimia.polsri.ac.id/',
+      githubLink: 'https://github.com/amannndaptr/teknikkimia.polsri.ac.id',
     },
     {
       title: 'SPI Polsri',
       description:
         'The official website of the Satuan Pengawasan Internal (SPI) of Polsri to support reports, and internal supervision information.',
-      tech: ['CodeIgniter4', 'PHP' 'MySQL', 'Tailwind CSS'],
-      type: 'website',
+      tech: ['CodeIgniter4', 'PHP', 'MySQL'],
+      type: 'both',
       link: 'https://spi.polsri.ac.id/',
+      githubLink: 'https://github.com/Apriiansh/spi-polsri',
+    },
+     {
+      title: 'Pelakor - Pelaporan Aset Kantor',
+      description:
+        'A full-stack route tracking application for monitoring and managing vehicle locations in real-time with mobile and backend integration.',
+      tech: ['React Native', 'Express.js', 'PostgreSQL'],
+      type: 'both',
+      link: 'https://pelakor.example.com',
+      githubLink: 'https://github.com/Apriiansh/pelakor-app',
+    },
+    {
+      title: 'More Freelance Projects',
+      description:
+        'Various projects including software development, and technical support services such as PC building, Software Installation and Troubleshooting',
+      tech: ['Software Development', 'IT Support'],
+      type: 'more',
+      link: '#',
     },
   ];
 
@@ -42,7 +62,7 @@ export default function ProjectsSection() {
     <div className="w-full flex items-center justify-center py-8">
       <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 pb-2 gradient-text">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold my-4 gradient-text">
             Projects
           </h2>
           <div className="max-w-3xl mx-auto px-4">
@@ -52,7 +72,7 @@ export default function ProjectsSection() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 w-full">
           {projects.map((project, index) => (
             <div
               key={index}
@@ -81,7 +101,7 @@ export default function ProjectsSection() {
                 </div>
 
                 {/* Project Links */}
-                <div className="flex">
+                <div className="flex gap-2">
                   {project.type === 'github' ? (
                     <a
                       href={project.link}
@@ -91,7 +111,7 @@ export default function ProjectsSection() {
                       <Github className="w-3 h-3" />
                       Code
                     </a>
-                  ) : (
+                  ) : project.type === 'website' ? (
                     <a
                       href={project.link}
                       target="_blank"
@@ -100,6 +120,29 @@ export default function ProjectsSection() {
                       <ExternalLink className="w-3 h-3" />
                       Visit
                     </a>
+                  ) : project.type === 'both' ? (
+                    <>
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        className="flex items-center justify-center gap-2 px-4 py-2 bg-gradient-to-r from-[var(--accent)] to-[var(--accent-secondary)] rounded-full text-xs hover:opacity-90 transition-all duration-300 text-[var(--foreground)]"
+                      >
+                        <ExternalLink className="w-3 h-3" />
+                        Visit
+                      </a>
+                      <a
+                        href={project.githubLink}
+                        target="_blank"
+                        className="flex items-center justify-center gap-2 px-4 py-2 glass rounded-full text-xs hover:bg-white/20 transition-all duration-300 text-[var(--foreground-secondary)] hover:text-[var(--foreground)]"
+                      >
+                        <Github className="w-3 h-3" />
+                        Code
+                      </a>
+                    </>
+                  ) : (
+                    <div className="px-4 py-2 glass rounded-full text-xs text-[var(--foreground-secondary)]">
+                      Various Projects
+                    </div>
                   )}
                 </div>
               </div>
