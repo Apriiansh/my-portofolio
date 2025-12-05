@@ -45,7 +45,7 @@ export default function ProjectsSection() {
         'A full-stack route tracking application for monitoring and managing vehicle locations in real-time with mobile and backend integration.',
       tech: ['React Native', 'Express.js', 'PostgreSQL'],
       type: 'both',
-      link: 'https://pelakor.example.com',
+      link: 'https://pelakor.oganilirkab.go.id/',
       githubLink: 'https://github.com/Apriiansh/pelakor-app',
     },
     {
