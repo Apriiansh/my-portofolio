@@ -42,7 +42,7 @@ export default function ProjectsSection() {
      {
       title: 'Pelakor - Pelaporan Aset Kantor',
       description:
-        'A full-stack route tracking application for monitoring and managing vehicle locations in real-time with mobile and backend integration.',
+        'A full-stack asset and inventory reporting system for Setda Ogan Ilir to manage and track office assets, equipment, and inventory with mobile and web integration.',
       tech: ['React Native', 'Express.js', 'PostgreSQL'],
       type: 'both',
       link: 'https://pelakor.oganilirkab.go.id/',
