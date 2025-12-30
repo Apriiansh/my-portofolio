@@ -1,6 +1,6 @@
 'use client';
 
-import { Code, Smartphone, Globe, FileText, Wrench, Users } from 'lucide-react';
+import { Code, Wrench, FileText, Users } from 'lucide-react';
 import Image from 'next/image';
 
 export default function AboutSection() {
@@ -13,18 +13,18 @@ export default function AboutSection() {
 
   return (
     <div className="w-full min-h-screen flex items-center justify-center">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12 lg:py-20">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mt-4 mb-4 pb-2 gradient-text">
             About Me
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center mb-12">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center mb-8 md:mb-12">
           {/* Profile Image */}
           <div className="flex justify-center">
             <div className="relative">
-              <div className="w-60 h-60 glass rounded-3xl flex items-center justify-center">
+              <div className="w-48 h-48 sm:w-60 sm:h-60 glass rounded-3xl flex items-center justify-center">
                 <Image
                   src="/my.jpg"
                   alt="Muhammad Apriyansah"
@@ -50,11 +50,11 @@ export default function AboutSection() {
         </div>
 
         {/* Skills Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-8 md:mb-12">
           {skills.map((skill) => (
             <div
               key={skill.name}
-              className="glass rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
+              className="glass rounded-2xl p-4 md:p-6 hover:bg-white/10 transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
             >
               <skill.icon className="w-12 h-12 text-[var(--accent)] mb-4" />
               <h4 className="text-xl font-semibold mb-2 text-[var(--foreground)]">

@@ -1,7 +1,6 @@
 'use client';
 
-import { Mail, Phone, MapPin, Github, Linkedin, Globe, Instagram, Facebook } from 'lucide-react';
-import { useState } from 'react';
+import { Mail, Phone, MapPin, Github, Linkedin, Instagram, Facebook } from 'lucide-react';
 
 export default function ContactSection() {
   
@@ -20,7 +19,7 @@ export default function ContactSection() {
   ];
 
   return (
-    <div className="w-full flex items-center justify-center py-8 px-4">
+    <div className="w-full min-h-screen flex items-center justify-center py-8 px-4">
       <div className="max-w-6xl mx-auto w-full">
         <div className="text-center mb-8">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 gradient-text">

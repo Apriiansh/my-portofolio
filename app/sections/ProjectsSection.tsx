@@ -59,37 +59,37 @@ export default function ProjectsSection() {
   ];
 
   return (
-    <div className="w-full flex items-center justify-center py-8">
+    <div className="w-full min-h-screen flex items-center justify-center py-8">
       <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-8">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold my-4 gradient-text">
+        <div className="text-center mb-4 md:mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold my-2 md:my-4 gradient-text">
             Projects
           </h2>
-          <div className="max-w-3xl mx-auto px-4">
+          {/* <div className="max-w-3xl mx-auto px-4">
             <p className="text-base sm:text-lg text-[var(--foreground-secondary)]">
               Here are some of the projects I have worked on, showcasing my experience in mobile applications, information systems, and digital archiving.
             </p>
-          </div>
+          </div> */}
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-3 lg:gap-6 w-full">
           {projects.map((project, index) => (
             <div
               key={index}
               className="glass rounded-3xl overflow-hidden hover:bg-white/10 transition-all duration-500 transform hover:scale-[1.02] hover:shadow-2xl group"
             >
               
-              <div className="p-4 sm:p-6">
-                <h3 className="text-lg sm:text-xl font-bold mb-2 text-[var(--foreground)] group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[var(--accent)] group-hover:to-[var(--accent-secondary)] transition-all duration-300 leading-tight">
+              <div className="p-2 md:p-3 lg:p-6">
+                <h3 className="text-base md:text-lg lg:text-xl font-bold mb-2 text-[var(--foreground)] group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[var(--accent)] group-hover:to-[var(--accent-secondary)] transition-all duration-300 leading-tight">
                   {project.title}
                 </h3>
 
-                <p className="text-[var(--foreground-secondary)] mb-3 sm:mb-4 leading-relaxed text-xs sm:text-sm">
+                <p className="text-[var(--foreground-secondary)] mb-2 md:mb-3 lg:mb-4 leading-relaxed text-xs sm:text-sm">
                   {project.description}
                 </p>
 
                 {/* Tech Stack */}
-                <div className="flex flex-wrap gap-2 mb-3 sm:mb-4">
+                <div className="flex flex-wrap gap-2 mb-2 md:mb-3 lg:mb-4">
                   {project.tech.map((tech) => (
                     <span
                       key={tech}
