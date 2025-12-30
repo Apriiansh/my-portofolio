@@ -6,7 +6,11 @@ export const metadata: Metadata = {
   description: "Modern portfolio website showcasing full-stack development and creative design skills. Built with Next.js, TypeScript, and Tailwind CSS.",
   keywords: "portfolio, full-stack developer, web developer, designer, Next.js, React, TypeScript",
   authors: [{ name: "Apri" }],
-  viewport: "width=device-width, initial-scale=1",
+};
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "#fef3c7" },
     { media: "(prefers-color-scheme: dark)", color: "#0f172a" }
