@@ -13,7 +13,7 @@ export default function ContactSection() {
 
   const socialLinks = [
     { icon: Github, href: 'https://github.com/Apriiansh', label: 'GitHub' },
-    { icon: Linkedin, href: 'https://www.linkedin.com/in/muhammad-apriyansah-298a251a2', label: 'LinkedIn' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/in/apriiansh27/', label: 'LinkedIn' },
     { icon: Instagram, href: 'https://www.instagram.com/apriansh_27', label: 'Instagram' },
     { icon: Facebook, href: 'https://www.facebook.com/aprii.ansh', label: 'Fesnuk' }
   ];
