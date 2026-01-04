@@ -26,7 +26,7 @@ export default function ContactSection() {
             Get In Touch
           </h2>
           <p className="text-base sm:text-lg text-[var(--foreground-secondary)] max-w-3xl mx-auto">
-            Looking for a Employee? Hire me please.
+            Feel free to reach out for collaborations or just to say hi!
           </p>
         </div>
 
