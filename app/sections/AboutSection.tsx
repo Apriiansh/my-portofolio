@@ -3,7 +3,7 @@
 import { Code, Wrench, FileText, Users } from 'lucide-react';
 import Image from 'next/image';
 
-export default function AboutSection() {
+export default function AboutSection() { 
   const skills = [
     { icon: Code, name: 'Programming', desc: 'Web & Mobile Development' },
     { icon: Wrench, name: 'IT Support', desc: 'System setup, troubleshooting, hardware' },

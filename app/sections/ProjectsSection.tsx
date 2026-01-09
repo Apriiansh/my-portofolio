@@ -28,7 +28,7 @@ export default function ProjectsSection() {
       tech: ['Next.Js', 'TypeScript', 'Supabase'],
       type: 'both',
       link: 'https://teknikkimia.polsri.ac.id/',
-      githubLink: 'https://github.com/amannndaptr/teknikkimia.polsri.ac.id',
+      githubLink: 'https://github.com/Apriiansh/teknik-kimia-polsri',
     },
     {
       title: 'SPI Polsri',
