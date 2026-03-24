@@ -1,71 +1,115 @@
 'use client';
 
-import { Code, Wrench, FileText, Users } from 'lucide-react';
+import { Code, Wrench, Database, Award } from 'lucide-react';
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 
-export default function AboutSection() { 
+export default function AboutSection() {
   const skills = [
-    { icon: Code, name: 'Programming', desc: 'Web & Mobile Development' },
-    { icon: Wrench, name: 'IT Support', desc: 'System setup, troubleshooting, hardware' },
-    { icon: FileText, name: 'Office Tools', desc: 'Documents, Spreadsheets, Presentations' },
-    { icon: Users, name: 'Soft Skills', desc: 'Problem Solving, Collaboration, Adaptability' }
+    {
+      icon: Code,
+      name: 'Development',
+      items: ['PHP (CI4, Laravel)', 'Next.js', 'React Native', 'HTML5, CSS3, TailwindCSS']
+    },
+    {
+      icon: Wrench,
+      name: 'IT Support',
+      items: ['Hardware Troubleshooting', 'Network (Mikrotik, LAN)', 'OS Installation', 'CCTV / IP Camera']
+    },
+    {
+      icon: Database,
+      name: 'Database & Tools',
+      items: ['MySQL, PostgreSQL', 'Git / GitHub', 'VS Code','Antigravity', 'WinBox']
+    },
+    {
+      icon: Award,
+      name: 'Certifications',
+      items: ['Junior Mobile Programming', 'Next.js Fundamental', 'Git & GitHub']
+    }
   ];
 
+  const fadeUp = {
+    hidden: { opacity: 0, y: 16 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.4, ease: "easeOut" as const }
+    }
+  };
+
+  const stagger = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.06, delayChildren: 0.1 }
+    }
+  };
+
   return (
-    <div className="w-full min-h-screen flex items-center justify-center">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12 lg:py-20">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mt-4 mb-4 pb-2 gradient-text">
+    <div className="w-full h-screen flex items-center justify-center overflow-hidden">
+      <motion.div
+        className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8"
+        variants={stagger}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        <motion.div variants={fadeUp} className="text-center mb-8">
+          <h2 className="text-3xl sm:text-4xl font-bold gradient-text">
             About Me
           </h2>
-        </div>
+        </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center mb-8 md:mb-12">
-          {/* Profile Image */}
-          <div className="flex justify-center">
-            <div className="relative">
-              <div className="w-48 h-48 sm:w-60 sm:h-60 glass rounded-3xl flex items-center justify-center">
-                <Image
-                  src="/my.jpg"
-                  alt="Muhammad Apriyansah"
-                  width={240}
-                  height={240}
-                  className="rounded-2xl object-cover"
-                />
-              </div>
-              <div className="absolute -inset-4 bg-gradient-to-r from-[var(--accent)]/20 to-[var(--accent-secondary)]/20 rounded-3xl blur-xl -z-10"></div>
+        {/* Profile + Bio */}
+        <motion.div variants={fadeUp} className="flex flex-col md:flex-row gap-6 md:gap-8 items-center mb-8">
+          <div className="flex-shrink-0">
+            <div className="w-28 h-28 sm:w-32 sm:h-32 glass rounded-lg overflow-hidden">
+              <Image
+                src="/my.jpg"
+                alt="Muhammad Apriyansah"
+                width={128}
+                height={128}
+                className="object-cover w-full h-full"
+              />
             </div>
           </div>
-
-
-          {/* Bio */}
-          <div className="space-y-6">
-            <h3 className="text-3xl font-semibold gradient-text">Muhammad Apriyansah</h3>
-            <div className="space-y-4 text-[var(--foreground-secondary)]">
-              <p>
-                Versatile IT professional with hands-on experience in software development, technical support, and system administration through diverse freelance projects. I thrive in dynamic environments where each project brings unique challenges—from building web and mobile applications to troubleshooting systems and managing IT infrastructure. My ability to quickly adapt to different technologies and requirements enables me to deliver effective solutions that meet varied client needs.
-              </p>
-            </div>
+          <div className="space-y-2 text-center md:text-left">
+            <h3 className="text-lg sm:text-xl font-semibold text-[var(--foreground)]">Muhammad Apriyansah</h3>
+            <p className="text-[10px] font-mono text-[var(--accent)] tracking-widest uppercase">
+              Web Developer &bull; IT Support
+            </p>
+            <p className="text-xs text-[var(--foreground-secondary)] leading-relaxed max-w-lg">
+              D3 Informatics Management graduate (GPA 3.65) with a focus on building reliable web and mobile applications. 
+              Proficient in CodeIgniter 4 and Next.js, with solid experience in database design and system administration. 
+              Skilled in delivering end-to-end development projects and providing hands-on IT support including hardware troubleshooting 
+              and network configuration.
+            </p>
           </div>
-        </div>
+        </motion.div>
 
         {/* Skills Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-8 md:mb-12">
-          {skills.map((skill) => (
-            <div
-              key={skill.name}
-              className="glass rounded-2xl p-4 md:p-6 hover:bg-white/10 transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
-            >
-              <skill.icon className="w-12 h-12 text-[var(--accent)] mb-4" />
-              <h4 className="text-xl font-semibold mb-2 text-[var(--foreground)]">
-                {skill.name}
-              </h4>
-              <p className="text-[var(--foreground-secondary)]">{skill.desc}</p>
-            </div>
-          ))}
-        </div>
-
-      </div>
+        <motion.div variants={fadeUp}>
+          <h3 className="text-[10px] font-mono text-[var(--accent)] tracking-widest uppercase mb-3">Skills & Tools</h3>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5">
+            {skills.map((skill) => (
+              <motion.div
+                key={skill.name}
+                variants={fadeUp}
+                whileHover={{ y: -2, transition: { duration: 0.15 } }}
+                className="glass rounded-md p-3 group"
+              >
+                <skill.icon className="w-4 h-4 text-[var(--accent)] mb-1.5 group-hover:text-[var(--accent-secondary)] transition-colors duration-200" />
+                <h4 className="text-[11px] font-semibold text-[var(--foreground)] mb-1">{skill.name}</h4>
+                <ul className="space-y-0.5">
+                  {skill.items.map((item, i) => (
+                    <li key={i} className="text-[10px] text-[var(--foreground-secondary)] leading-relaxed">{item}</li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+      </motion.div>
     </div>
   );
 }
