@@ -97,14 +97,47 @@ const projects: Project[] = [
       '/img/pelakor/5.png',
     ],
   },
-  // {
-  //   title: 'More Projects',
-  //   description:
-  //     'Various freelance projects: software development, PC building, system installation, troubleshooting.',
-  //   tech: ['Development', 'IT Support'],
-  //   type: 'more',
-  //   link: '#',
-  // },
+  {
+    title: 'PMW (Program Mahasiswa Wirausaha)',
+    description:
+      'Entrepreneurship program management system for Politeknik Negeri Sriwijaya, featuring funding disbursement, mentoring, pitching validation, and student business development tracking.',
+    tech: ['CodeIgniter4', 'PHP', 'MySQL', 'Tailwind CSS'],
+    type: 'website',
+    link: 'https://simpmw.polsri.ac.id/',
+    images: [
+      '/img/pmw/1.png',
+      '/img/pmw/2.png',
+      '/img/pmw/3.png',
+    ],
+  },
+  {
+    title: 'Perjadin (Perjalanan Dinas)',
+    description:
+      'Official travel expense management system for Politeknik Negeri Sriwijaya, handling travel orders, SPJ, budget rincian, SPD generation, and approval workflows.',
+    tech: ['CodeIgniter4', 'PHP', 'MySQL', 'Tailwind CSS'],
+    type: 'website',
+    link: 'https://polsripay.polsri.ac.id/perjadin/',
+    images: [
+      '/img/perjadin/1.png',
+      '/img/perjadin/2.png',
+      '/img/perjadin/3.png',
+      '/img/perjadin/4.png',
+      '/img/perjadin/5.png',
+    ],
+  },
+  {
+    title: 'IT Support',
+    description:
+      'Comprehensive IT support services including hardware troubleshooting, PC building, network configuration (Mikrotik, LAN), OS installation, CCTV/IP camera setup, and system maintenance.',
+    tech: ['Hardware', 'Networking', 'Mikrotik', 'CCTV', 'OS Installation'],
+    type: 'website',
+    link: '#',
+    images: [
+      '/img/it/1.png',
+      '/img/it/2.png',
+      '/img/it/3.png',
+    ],
+  },
 ];
 
 export default function ProjectsSection() {
@@ -208,6 +241,17 @@ export default function ProjectsSection() {
                       >
                         <Github className="w-3 h-3" />
                         Code
+                      </a>
+                    ) : project.type === 'website' ? (
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={(e) => e.stopPropagation()}
+                        className="flex items-center gap-1.5 px-3 py-1.5 bg-[var(--accent)] rounded text-[10px] font-medium hover:brightness-110 transition-all duration-200 text-white"
+                      >
+                        <ExternalLink className="w-3 h-3" />
+                        Visit
                       </a>
                     ) : project.type === 'both' ? (
                       <>
